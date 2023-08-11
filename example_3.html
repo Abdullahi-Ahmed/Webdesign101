@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+   <meta charset="utf-8">
+   <title>Exams</title>
+   <style></style>
+  </head>
+  
+  <body>
+    <h1 id="demo">Hello World</h1>
+    <button onclick="toggleText()">Toggle Content</button>
+    <p>Welcome to the world of DOM, hope you like it</p>
+
+    <script>
+      function toggleText() {
+        const demoElement = document.getElementById("demo");
+        if (demoElement.innerHTML === "Hello World") {
+          demoElement.innerHTML = "Powered by the DOM";
+        } else {
+          demoElement.innerHTML = "Hello World";
+        }
+      }
+    </script>
+  </body>
+</html>

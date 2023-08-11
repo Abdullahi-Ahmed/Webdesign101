@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+   <meta charset="utf-8">
+   <title>Exams</title>
+   <style></style>
+  </head>
+  
+  <body>
+    <h1 id="demo" onmouseover="changeToDOM()" onmouseout="changeToHello()">Hello World</h1>
+    <p>Welcome to the world of DOM, hope you like it</p>
+
+    <script>
+      function changeToDOM() {
+        document.getElementById("demo").innerHTML = "Powered by the DOM";
+      }
+
+      function changeToHello() {
+        document.getElementById("demo").innerHTML = "Hello World";
+      }
+    </script>
+  </body>
+</html>

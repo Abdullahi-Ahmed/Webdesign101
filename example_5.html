@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banner Color Toggle</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        #banner {
+            background-color: blue;
+            padding-top: 5%;
+            padding-left: 10%;
+            height: 30%;
+        }
+
+        #buttons {
+            margin-top: 1em; /* changed from 'len' since it's not a valid value */
+            padding-left: 1em; /* changed from 'len' since it's not a valid value */
+        }
+    </style>
+</head>
+<body>
+
+<div id="banner">
+    <h1>
+        This is only the beginning ....
+    </h1>
+</div>
+<div id="buttons">
+    <input type="button" value="previous" onclick="changeColor(-1)" />
+    <input type="button" value="next" onclick="changeColor(1)" />
+</div>
+
+<script>
+    let colors = ["blue", "red", "green", "yellow", "purple"];
+    let currentColorIndex = 0;
+
+    function changeColor(direction) {
+        currentColorIndex += direction;
+
+        // Ensure the index stays within the bounds of the colors array
+        if (currentColorIndex < 0) {
+            currentColorIndex = colors.length - 1;
+        } else if (currentColorIndex >= colors.length) {
+            currentColorIndex = 0;
+        }
+
+        document.getElementById("banner").style.backgroundColor = colors[currentColorIndex];
+    }
+</script>
+
+</body>
+</html>

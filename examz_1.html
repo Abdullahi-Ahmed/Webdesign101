@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery Showcase</title>
+</head>
+<body>
+
+<div id="artShowcase">
+    <h1>Renaissance Art</h1>
+</div>
+<div id="controls">
+    <input type="button" value="Previous Art Style" onclick="changeStyle(-1)" />
+    <input type="button" value="Next Art Style" onclick="changeStyle(1)" />
+</div>
+
+<script>
+    let artStyles = ["Renaissance", "Baroque", "Impressionism", "Cubism", "Abstract"];
+    let currentStyleIndex = 0;
+
+    function changeStyle(direction) {
+        currentStyleIndex += direction;
+
+        // Ensure the index stays within the bounds of the artStyles array
+        if (currentStyleIndex < 0) {
+            currentStyleIndex = artStyles.length - 1;
+        } else if (currentStyleIndex >= artStyles.length) {
+            currentStyleIndex = 0;
+        }
+
+        document.getElementById("artShowcase").getElementsByTagName("h1")[0].innerText = artStyles[currentStyleIndex] + " Art";
+    }
+</script>
+
+</body>
+</html>
