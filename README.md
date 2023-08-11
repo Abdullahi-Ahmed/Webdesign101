@@ -84,3 +84,27 @@ function changeStyle(direction) {
 ```
 
 To see this in action, you would need to combine the above HTML and JavaScript code in a single HTML document. When you load the page, you'll be able to click the "Previous Art Style" and "Next Art Style" buttons to cycle through the art styles.
+
+
+## Practice Exam Question: Dynamic Book Genre Showcase
+Context: A website for a book club wants to showcase different book genres. Visitors can cycle through different genres using provided buttons, and as they do, the background of the showcase banner and a descriptive header change.
+
+## Section One: Layout
+Instructions: Write the HTML layout for a book genre showcase. The layout should consist of:
+
+A banner (div) with an ID of "bookGenre" which initially displays the text "Mystery Novels".
+Two buttons below the banner: One labeled "Previous Genre" and the other "Next Genre".
+Your layout should resemble the following:
+
+css
+Copy code
+[Mystery Novels]
+[Previous Genre] [Next Genre]
+Save to grepper
+
+## Section Two: DOM Interactivity
+Instructions: Using JavaScript, implement the following functionality:
+
+The "bookGenre" banner has a list of five genres: "Mystery", "Science Fiction", "Romance", "Fantasy", and "Historical".
+Clicking "Next Genre" cycles forward through the list, and "Previous Genre" cycles backward.
+When the end or beginning of the list is reached, it should wrap around.
